@@ -2,17 +2,17 @@
 
 ## Seção 1.Dia 1. Exercícios Parte 2 - Unix e Bash: manipulação e busca.
 
-01
+Exercise 01
 mkdir unix_tests_search
 cd unix_tests_search 
 
-02
+Exercise 02
 curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  1842  100  1842    0     0   4214      0 --:--:-- --:--:-- --:--:--  4224
 
-03
+Exercise 03
 cat countries.txt 
 Afghanistan
 Albania
@@ -211,26 +211,26 @@ Yemen
 Zambia
 Zimbabwe%
 
-04
+Exercise 04
 less countries.txt 
 
 [1]  + 4139 suspended  less countries.txt
 
-05
+Exercise 05
 less countries.txt
 /Zambia
 
 [2]  + 4148 suspended  less countries.txt
 
-06
+Exercise 06
 grep Brazil countries.txt 
 Brazil
 
-07
+Exercise 07
 grep -i brazil countries.txt 
 Brazil
 
-08
+Exercise 08
 cat >> phrases.txt
 Primeira linha de código
 Segunda linha de código
@@ -239,25 +239,25 @@ Quarta linha de código
 ^Z
 [4]  + 4199 suspended  cat >> phrases.txt
 
-09
+Exercise 09
 grep -iv 'fox' phrases.txt 
 Primeira linha de código
 Segunda linha de código
 Terceira linha de código
 Quarta linha de código
 
-10
+Exercise 10
 wc -w phrases.txt 
 16 phrases.txt
 
-11
+Exercise 11
 wc -l phrases.txt 
 4 phrases.txt
 
-12
+Exercise 12
 touch empty.tbt empty.pdf
 
-13
+Exercise 13
 ls -l
 total 8
 -rw-rw-r-- 1 victoria victoria 1842 out 14 10:35 countries.txt
@@ -265,18 +265,18 @@ total 8
 -rw-rw-r-- 1 victoria victoria    0 out 14 10:47 empty.tbt
 -rw-rw-r-- 1 victoria victoria  101 out 14 10:45 phrases.txt
 
-14
+Exercise 14
 ls -l *txt
 -rw-rw-r-- 1 victoria victoria 1842 out 14 10:35 countries.txt
 -rw-rw-r-- 1 victoria victoria  101 out 14 10:45 phrases.txt
 
-15
+Exercise 15
 ls -l *t?t
 -rw-rw-r-- 1 victoria victoria 1842 out 14 10:35 countries.txt
 -rw-rw-r-- 1 victoria victoria    0 out 14 10:47 empty.tbt
 -rw-rw-r-- 1 victoria victoria  101 out 14 10:45 phrases.txt
 
-16
+Exercise 16
 man ls
 
 
