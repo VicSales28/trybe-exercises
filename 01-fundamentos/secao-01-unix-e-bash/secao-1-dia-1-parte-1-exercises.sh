@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Bloco 1 - Unix e Bash Exercícios
+## Seção 1.Dia 1. Exercícios Parte 1 - Unix e Bash: criação de arquivos e diretórios.
 01
 mkdir unix_tests
 cd unix_testes
