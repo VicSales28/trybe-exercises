@@ -1,4 +1,5 @@
-## Exercícios resolvidos das seguintes seções:
-01 - Unix & Bash
-02 - Git & GitHub
-03 - Introdução a HTML e CSS
+# Conteúdos vistos e exercícios resolvidos:
+
+- [X] Unix e Bash
+- [X] Git e GitHub
+- [ ] HTML e CSS
