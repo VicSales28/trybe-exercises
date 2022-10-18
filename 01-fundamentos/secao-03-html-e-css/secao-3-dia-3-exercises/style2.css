@@ -1,0 +1,42 @@
+.super-mario {
+    width: 100px;
+    position: absolute;
+    /* position: absolute deixa a imagem
+    na frente de todos elementos */
+    top: 80px;
+    left: 2px;
+    /* Através do atributo left é 
+    possível definir a posição 
+    horizontal do elemento em relação 
+    a sua borda esquerda. */
+
+  }
+  
+  .goomba {
+    width: 100px;
+    position: absolute;
+    top:  230px;
+    left: 2px;
+  }
+
+  .baloon {
+    width: 110px;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+  }
+
+  .speach {
+    width: 80px;
+    position: absolute;
+    top: 75px;
+    left: 113px;
+    z-index: 2;
+  }
+  
+  .bowser {
+    width: 120px;
+    position: absolute;
+    top:  100px;
+    left: 210px;
+  }
