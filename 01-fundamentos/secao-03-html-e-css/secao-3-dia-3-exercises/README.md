@@ -10,7 +10,7 @@ Você provavelmente não conhece algumas das propriedades utilizadas nesse códi
 
 ## Seção 3.Dia 3. Exercícios Parte 2 - HTML e CCS: Posicionamento de Elementos
 
-index2.html
+index2.html style2.css
 
 01 - Posicione o Mário acima do Goomba.
 
