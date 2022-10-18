@@ -26,7 +26,7 @@ index2.html
 
 06 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto.
 
-## Seção 3.Dia 2. Exercícios Parte 3 - HTML e CCS: CSS inline e externo
+## Seção 3.Dia 2. Exercícios Parte 3 - HTML e CCS: CSS Inline e externo
 
 index3.html
 

@@ -1,4 +1,4 @@
-## Seção 3.Dia 1. Exercícios Parte 1 - HTML: primeiras tags
+## Seção 3.Dia 1. Exercícios Parte 1 - HTML: Primeiras tags
 
 01 - No arquivo index.html, crie uma lista das pessoas com quem você já fez amizade na Trybe.
 
