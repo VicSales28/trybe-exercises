@@ -1,6 +1,6 @@
 /* 
 Seção 4. Dia 1. Exercícios - Agora, a prática
-02- Utilize if/else para fazer um programa que retorne o maior de dois números. 
+02 - Utilize if/else para fazer um programa que retorne o maior de dois números. 
 Defina, no começo do programa, duas constantes com os valores que serão comparados.
 */
 
