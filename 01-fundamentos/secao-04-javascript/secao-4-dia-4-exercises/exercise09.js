@@ -1,12 +1,13 @@
-//  Seção 4. Dia 4.  Exercícios - objetos e for/in
+//  Seção 4. Dia 4.  Exercícios - Agora, a prática: objetos e for/in
 //  let info = {
 //   personagem: 'Margarida',
 //   origem: 'Pato Donald',
 //   nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
 //  };
-//  Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. 
+//  01 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. 
 //  Use a sintaxe meuObjeto.chave.
 
+console.log("Item 01")
 let info = {
 personagem: 'Margarida',
 origem: 'Pato Donald',
@@ -15,15 +16,20 @@ nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
 
 console.log("Olá " + info.personagem)
 
-// Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, 
-// imprima o objeto no console. Use a sintaxe meuObjeto['chave'] = valor. Valor esperado no console:
+// 02 - Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, 
+// imprima o objeto no console. Use a sintaxe meuObjeto['chave'] = valor. 
 
+console.log("Item 02")
 info['recorrente'] = 'Sim'
 
 console.log(info)
 
-// Faça um for/in que mostre todas as chaves do objeto.
+// 03 - Faça um for/in que mostre todas as chaves do objeto.
 
+console.log("Item 03")
 for (let key in info) {
-  console.log(key + ': ' + info[key]);
+  console.log(info[key]);
+}
+for(let properties in info) {
+  console.log(info[properties]);
 }

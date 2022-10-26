@@ -1,8 +1,9 @@
-// Seção 4. Dia 4.  Exercícios - objetos e for/in
-// Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: 
+// Seção 4. Dia 4.  Exercícios - Agora, a prática: objetos e for/in
+// 04 - Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: 
 // ‘Tio Patinhas’, ‘Christmas on Bear Mountain, Dell’s Four Color Comics #178’, ‘O último MacPatinhas’, 
 // ‘Sim’. Então, imprima os valores de cada objeto juntos, de acordo com cada uma das chaves. 
 // Valor esperado no console:
+console.log("Item 04")
 let info1 = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
@@ -16,7 +17,15 @@ let info1 = {
   nota: 'O último MacPatinhas',
   recorrente: "Sim"
   };
-  
-  for (let key in info1 && let key in info2) {
-    console.log(key + ': ' + info1[key] && key + ': ' + info2[key]);
-  }
+for (let properties in info1) 
+  //   if (
+  //     properties === 'recorrente' &&
+  //     info1[properties] === 'Sim' &&
+  //     info2[properties] === 'Sim'
+  //   ) {
+  //     console.log('Ambos recorrentes');
+  //   } else {
+  //     console.log(info1[properties] + ' e ' + info2[properties]);
+  //   }
+  // }
+  console.log(info1[properties] + ' e ' + info2[properties]);
