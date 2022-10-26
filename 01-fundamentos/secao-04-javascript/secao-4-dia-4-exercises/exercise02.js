@@ -7,6 +7,6 @@ let names = {
   person3: 'Jorge' 
 };
 
-for (let posicao in names) {
-  console.log("Olá " + names[posicao])
+for (let index in names) {
+  console.log("Olá " + names[index])
 }
