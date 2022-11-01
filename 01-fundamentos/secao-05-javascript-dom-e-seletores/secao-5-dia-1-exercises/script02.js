@@ -1,3 +1,6 @@
+// Seção 5. Dia 1. Exercícios - funções de manipulação do DOM.
+// Fique à vontade para soltar a criatividade e alterar o arquivo como desejar!
+
 const header = document.getElementById('header-container');
 header.style.backgroundColor = 'blue';
 
