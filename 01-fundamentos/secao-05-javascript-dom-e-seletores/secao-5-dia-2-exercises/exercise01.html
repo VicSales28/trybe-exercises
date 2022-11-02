@@ -1,56 +1,36 @@
-<!-- Seção 5. Dia 2. Exercícios: Buscando elementos  -->
+<!-- Diferenças entre as propriedades nextSibling e nextElementSibling  -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>nextSibling vs nextElementSibling </title>
 </head>
-<body>
-  <main id="paiDoPai">
-    <section id="pai">
-      <section id="primeiroFilho"></section>
-      <section id="elementoOndeVoceEsta">
-        <section id="primeiroFilhoDoFilho"></section>
-        <section id="segundoEUltimoFilhoDoFilho"></section>
-      </section>
-      Atenção!
-      <section id="terceiroFilho"></section>
-      <section id="quartoEUltimoFilho"></section>
-    </section>
-  </main> -->
+<body>  
+  <main>
+    <div id="start"></div>
+    nó
+    <p>elemento</p>
+  </main>
 
   <script>
-    // Acesse o elemento elementoOndeVoceEsta.
-    const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
 
+console.log(document.getElementById('start').nextSibling); // nó
 
-    // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
-    const pai = elementoOndeVoceEsta.parentElement; // retorna o elemento pai.
-    pai.style.color = 'orange';
+//const main = document.body.firstElementChild
 
-    // Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
-    // Você se lembra dos vídeos da aula anterior, como fazer isso?
-    const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild; //retorna o primeiro elemento filho.
-    primeiroFilhoDoFilho.innerText = 'Primeiro Filho Do Filho';
-    primeiroFilhoDoFilho.style.color = "blue";
+//console.log(main.firstElementChild)
 
-    // Acesse o primeiroFilho a partir de pai.
-    const primeiroFilho = pai.firstElementChild; //retorna o primeiro elemento filho.
+// const no = document.getElementById('start').nextSibling;
 
-    // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
-    const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling; // retorna o elemento anterior.
-    
-    // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
-    const textElement = elementoOndeVoceEsta.nextSibling; //retorna o próximo nó.
+// console.log(no.nodeType); //text node
 
-    // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
-    const terceiroFilho = elementoOndeVoceEsta.nextElementSibling; // retorna o próximo elemento.
+// console.log(no.nextSibling); // <p>elemento</p>
 
-    // Agora acesse o terceiroFilho a partir de pai.
-    const terceiroFilho2 = pai.lastElementChild.previousElementSibling;// retorna o elemento anterior.
+console.log(document.getElementById('start').nextElementSibling); // <p>elemento</p>
+
   </script>
- </body>
-</html> 
+</body>
+</html>

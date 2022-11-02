@@ -1,5 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,33 +18,40 @@
       <section id="terceiroFilho"></section>
       <section id="quartoEUltimoFilho"></section>
     </section>
-  </main> -->
-
+  </main>
   <script>
-    // Crie um irmão para `elementoOndeVoceEsta`.
-    const pai = document.getElementById('pai'); // Recupere o elemento com o id pai
-    const irmaoElementoOndeVoceEsta = document.createElement('section'); // Crie um novo elemento
-    irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
-    pai.appendChild(irmaoElementoOndeVoceEsta); // Adicione o elemento criado como filho do elemento com o id `pai`
 
-    // Crie um filho para `elementoOndeVoceEsta`.
-    const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta'); // Recupere o elemento com o id elementoOndeVoceEsta
-    const filhoElementoOndeVoceEsta = document.createElement('section'); // Crie um novo elemento 
-    filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
-    elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta); // Adicione o elemento criado como filho do elemento `elementoOndeVoceEsta`
+    // Acesse o elemento elementoOndeVoceEsta.
+    const elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta")
+    console.log(elementoOndeVoceEsta)
 
-    // Crie um filho para `primeiroFilhoDoFilho`.
-    const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho'); // Recupere o elemento com o id `primeiroFilhoDoFilho`
-    const filhoPrimeiroFilhoDoFilho = document.createElement('section'); // Crie um novo elemento 
-    filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
-    primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho); // Adicione o elemento criado como filho do elemento `primeiroFilhoDoFilho`
+    // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    const pai = elementoOndeVoceEsta.parentNode
+    document.querySelector("#pai").style.background = 'pink';
 
-    // A partir desse filho criado, acesse `terceiroFilho`.
-    const terceiroFilho = filhoPrimeiroFilhoDoFilho
-      .parentElement // primeiroFilhoDoFilho
-      .parentElement // elementoOndeVoceEsta
-      .nextElementSibling; // terceiroFilho
-    console.log(terceiroFilho);
+    // Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+    const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild
+    console.log(primeiroFilhoDoFilho)
+
+    // Acesse o primeiroFilho a partir de pai.
+    const primeiroFilho = pai.firstElementChild
+    console.log(primeiroFilho)
+
+    // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    const primeiroFilho = elementoOndeVoceEsta.previousElementSibling
+    
+    // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    const texto = elementoOndeVoceEsta.nextSibling
+    console.log(texto)
+
+    // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    const terceiroFilho1 = elementoOndeVoceEsta.nextElementSibling
+    console.log(terceiroFilho1)
+
+    // Agora acesse o terceiroFilho a partir de pai.
+    const terceiroFilho2 = pai.lastElementChild.previousElementSibling
+    console.log(terceiroFilho2)
+
   </script>
-<!-- </body>
-</html> -->
+</body>
+</html>
