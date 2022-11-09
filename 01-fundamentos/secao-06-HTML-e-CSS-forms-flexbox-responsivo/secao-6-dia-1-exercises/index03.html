@@ -1,0 +1,100 @@
+<!-- Seção 06. Dia 01. Exercícios:  Criando um formulário para concorrer a uma viagem -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 03</title>
+</head>
+<body>
+  <h1>Formulário para cadastro de currículo <h1>
+    <form>
+    <fieldset> 
+      <label for="fullName">Nome Completo:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Digite seu nome completo" maxlength="40" minlength="10" required>      
+      <br>
+      <label for="email">Endereço de e-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" maxlength="50" minlength="10" required>
+      <br>
+      <label for="destino1">Cidade</label>
+      <input type="radio" id="destino1" className="radios" name="destinations" value="Cidade" required>
+      <label for="destino2">Campo</label>
+      <input type="radio" id="destino2" className="radios" name="destinations" value="Campo" required>
+      <label for="destino3">Praia</label>
+      <input type="radio" id="destino3" className="radios" name="destinations" value="Praia" required>
+      <label for="destino4">Montanhas</label>
+      <input type="radio" id="destino4" className="radios" name="destinations" value="Montanhas" required>
+      <br>
+      <label for="resposta">Por que você deveria ser a pessoa desenvolvedora escolhida pelo concurso TrybeTrip? </label>
+      <br/>
+      <textarea name="resposta" id="resposta" cols="60" rows="10" placeholder="Digite sua resposta vencedora aqui"></textarea>
+      <br/>
+      <label for="date">Qual a melhor data para realizar sua viagem?</label>
+      <br/>
+      <input type="date" id="date">
+      <br/>
+      <label for="promo">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe. </label>
+      <input type="checkbox" name="promo" id="promo">
+      <br/>
+      <label for="concordo">Concordo que imagens de minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      <input type="checkbox" name="concordo" id="concordo" required>
+      <br>
+      <button type="submit" id="submit" disabled>Participar do concurso TrybeTrip</button>
+      <br>
+      <button type="button" id="clear">Apagar dados</button>
+    </fieldset>
+    </form>  
+    <script>
+        function toSubmit(event) {
+            event.preventDefault();
+            const validation = textInputValidation();
+            if (validation === false) {
+              alert('Dados inválidos');
+            } else {
+              alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.');
+            }
+          }
+        window.onload = function () {
+          const clearBtn = document.querySelector('#clear');
+          clearBtn.addEventListener('click', toClearInfo);
+          const submit = document.querySelector('#submit');
+          submit.addEventListener('click', toSubmit);
+          const concordo = document.querySelector('#concordo');
+          concordo.addEventListener('change', enableSubmit); // com checkBoxes usa-se 'change'
+        }
+      function toClearInfo() {
+        const formElements = document.querySelectorAll('input');
+        const textArea = document.querySelector('textarea');
+        for (let index = 0; index < formElements.length; index += 1) {
+          const userInput = formElements[index];
+          userInput.value = '';
+          userInput.checked = false;
+        }
+        textArea.value = '';
+      }
+      function enableSubmit() {
+          const submit = document.querySelector('#submit');
+          const concordo = document.querySelector('#concordo');
+          submit.disabled = !concordo.checked; //se a checkbox estiver “checkada”, nosso botão submit estará habilitado
+        }
+        function textInputValidation() {
+            const email = document.querySelector('#email').value.length;
+            const invalidEmail = email < 10 || email > 50;
+
+            const name = document.querySelector('#fullName').value.length;
+            const invalidName = name < 10 || name > 40;
+
+            const reason = document.querySelector('#resposta').value.length;
+            const invalidReason = reason > 500;
+
+            if (invalidEmail || invalidName || invalidReason) {
+              return false;
+            }
+            else {
+              return true;
+            }
+          }
+    </script>
+</body>
+</html>
