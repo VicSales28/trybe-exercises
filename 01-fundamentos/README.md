@@ -4,4 +4,5 @@
 - [X] Git e GitHub;
 - [X] HTML e CSS;
 - [X] Introdução a Javascript;
-- [ ] JavaScript: DOM, Eventos e Web Storage
+- [X] JavaScript: DOM, Eventos e Web Storage;
+- [ ] Introdução à JavaScript ES6 e Testes Unitários;

@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* aumetar letra, dar um pouco mais de margem*/
+
+body {
+  font-size: 20px;
+  font-family: Helvetica, aria, sans-serif;
+  margin: 0 3%;
+}
+
+article {}
+
+/* diminuir */
+
+h1 {
+  font-size: 28px;
+  margin: .9em 0 0 0;
+}
+
+h2 {}
+
+/* aumentar */
+
+img {
+  max-width: 100%;
+}
+
+main {}
+
+section {}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: rgba(0, 0, 255, .2);
+    margin: 25px 6%;
+  }
+
+  figure {
+    width: 45%;
+    margin-right: 4.5%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background: rgba(0, 255, 0, .2);
+    margin: 25px 10%;
+    max-width: 1130px;
+  }
+
+  figure {
+    width: 30%;
+    margin-right: 2.5%;
+  }
+}
