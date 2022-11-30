@@ -112,3 +112,20 @@ const someBookWasReleaseOnThe80s = (array) => {
 };
 
 console.log(someBookWasReleaseOnThe80s(books));
+
+/*
+Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
+*/
+// (Resolução feita por Pablo na mentoria: retorna true caso haja pessoa autora que tenha nascido no mesmo ano de outra pessoa autora)
+const verify = books.some((book, index) => {{ 
+
+  const test = books.some((book2,index2) => {
+    if (index === index2) { //
+      return '';
+    }
+    return book.author.birthYear === book2.author.birthYear ? true : false;
+  });
+  
+  return test;
+}})
+console.log(verify);
