@@ -63,13 +63,17 @@ const books = [
 ];
 
 /*
-Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
+01 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
 */
-console.log(books.find((books) => books.author.birthYear === 1947));
+console.log('01:')
+let writer = books.find((book) => book.author.birthYear === 1947)
+console.log(writer.author.name);
 
 /*
-Retorne o nome do livro com menor número de caracteres (menor nome).
+02 - Retorne o nome do livro com menor número de caracteres (menor nome).
 */
+console.log('02:')
+
 const verifySmallerName = (array) => {
   let smallerName = array[0]['name'];
 
@@ -86,8 +90,10 @@ const verifySmallerName = (array) => {
 console.log(verifySmallerName(books));
 
 /*
-Encontre o primeiro livro cujo nome possua 26 caracteres.
+03 - Encontre o primeiro livro cujo nome possua 26 caracteres.
 */
+console.log('03:')
+
 const getNamedBook = (array) => {
   const element = array.find((element) => (element.name).length === 26);
   return element.name;
@@ -96,17 +102,21 @@ const getNamedBook = (array) => {
 console.log(getNamedBook(books));
 
 /*
-Faça uma função que retorne true se todas as pessoas autoras tiverem nascido no século XX, ou false, caso contrário.
+04 - Faça uma função que retorne true se todas as pessoas autoras tiverem nascido no século XX, ou false, caso contrário.
 */
+console.log('04:')
+
 function everyoneWasBornOnSecXX(array) {
-  return array.every((array) => array.author.birthYear >= 1947);
+  return array.every((array) => array.author.birthYear >= 1901 && array.author.birthYear <= 2000);
 };
 
 console.log(everyoneWasBornOnSecXX(books));
 
 /*
-Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+05 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
 */
+console.log('05:')
+
 const someBookWasReleaseOnThe80s = (array) => {
   return array.some((array) => array.releaseYear >= 1980 && array.releaseYear <= 1989);
 };
@@ -114,9 +124,10 @@ const someBookWasReleaseOnThe80s = (array) => {
 console.log(someBookWasReleaseOnThe80s(books));
 
 /*
-Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
+06 - Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
 */
 // (Resolução feita por Pablo na mentoria: retorna true caso haja pessoa autora que tenha nascido no mesmo ano de outra pessoa autora)
+console.log('06:')
 const verify = books.some((book, index) => {{ 
 
   const test = books.some((book2,index2) => {

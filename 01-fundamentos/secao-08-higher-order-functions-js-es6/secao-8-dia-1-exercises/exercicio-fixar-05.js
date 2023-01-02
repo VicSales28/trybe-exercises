@@ -12,9 +12,7 @@ const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
 //Adicione seu código aqui
 
-const hasName = (arr, name) => arr.some ((element) => element === name)
-  
-;
+const hasName = (array, name) => array.some ((element) => element === name);
 
 console.log(hasName(names, 'Ana'));
 console.log(hasName(names, 'Pedro'));

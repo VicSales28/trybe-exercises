@@ -6,4 +6,4 @@ const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
 // Adicione seu código aqui
 
-console.log(names.find((names) => names.length === 5));
+console.log(names.find((name) => name.length === 5));

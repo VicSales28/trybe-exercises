@@ -9,4 +9,7 @@ const musicas = [
 ];
 
 // Adicione seu código aqui
-console.log(musicas.find((musicas) => musicas.id === '31031685'));
+
+let musica = musicas.find((musica) => musica.id === '31031685')
+
+console.log(musica.title);
