@@ -61,12 +61,14 @@ const books = [
   },
 ];
 
-// 3 - Faça uma função que retorne os nomes dos livros, dado o ano de nascimento das pessoas autoras.
+// 🚀  6 - Encontre o primeiro resultado cujo nome registrado começa com duas iniciais e retorne o nome do livro.
+// Resolução disponível na plataforma Trybe
 
-const booksByAuthorBirthYear = (birthYear) => {
-  return books
-  .filter((book) => book.author.birthYear === birthYear)
-  .map((book) => book.name);
+const authorWith3DotsOnName = () => {
+  return books.find((book) => (
+    book.author.name.split(' ')
+      .filter((word) => word.endsWith('.')).length === 3
+  )).name;
 }
 
-console.log(booksByAuthorBirthYear(1920));
+console.log(authorWith3DotsOnName());

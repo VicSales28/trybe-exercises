@@ -61,12 +61,14 @@ const books = [
   },
 ];
 
-// 3 - Faça uma função que retorne os nomes dos livros, dado o ano de nascimento das pessoas autoras.
+// 🚀  5 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 
-const booksByAuthorBirthYear = (birthYear) => {
-  return books
-  .filter((book) => book.author.birthYear === birthYear)
-  .map((book) => book.name);
+const oldBooks = (array) => {
+  // escreva seu código aqui
+  const currentYear = new Date().getFullYear();
+  return array
+  .filter((book) => (currentYear - book.releaseYear) > 60)
+  .map((book) => book.name)
 }
 
-console.log(booksByAuthorBirthYear(1920));
+console.log(oldBooks(books));

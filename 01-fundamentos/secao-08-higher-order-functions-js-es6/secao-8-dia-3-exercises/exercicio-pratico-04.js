@@ -61,12 +61,13 @@ const books = [
   },
 ];
 
-// 3 - Faça uma função que retorne os nomes dos livros, dado o ano de nascimento das pessoas autoras.
+// 🚀 4 - Crie um array que possua apenas os nomes de todas as pessoas autoras de ficção científica ou fantasia e ordene por ordem alfabética.
 
-const booksByAuthorBirthYear = (birthYear) => {
-  return books
-  .filter((book) => book.author.birthYear === birthYear)
-  .map((book) => book.name);
+const fantasyOrScienceFictionAuthors = (array) => {
+  return array
+  .filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+  .map((book) => book.author.name)
+  .sort(); 
 }
 
-console.log(booksByAuthorBirthYear(1920));
+console.log(fantasyOrScienceFictionAuthors(books));
