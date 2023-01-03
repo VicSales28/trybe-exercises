@@ -1,7 +1,3 @@
-/*
-A empresa em que você trabalha fechou um contrato com uma biblioteca e você está responsável por desenvolver o novo sistema para organizar os livros. O acervo que a biblioteca possui está descrito no array abaixo:
-*/
-
 const books = [
   {
     id: 1,
@@ -65,11 +61,13 @@ const books = [
   },
 ];
 
-// 🚀 1 - Filtre todos os objetos do gênero ficção científica ou fantasia.
+// 🚀  2 - Filtre os livros com mais de 60 anos desde sua publicação e ordene a partir do livro mais velho para o mais novo.
 
-const fantasyOrScienceFiction = (array) => {
-  return array.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+const oldBooksOrdered = (array) => {
+  const currentYear = new Date().getFullYear();
+  return array
+  .filter((book) => (currentYear - book.releaseYear) > 60)
+  .sort((a, b) => a.releaseYear - b.releaseYear); 
 }
 
-console.log(fantasyOrScienceFiction(books));
-
+console.log(oldBooksOrdered(books))

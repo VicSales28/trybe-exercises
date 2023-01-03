@@ -1,7 +1,3 @@
-/*
-A empresa em que você trabalha fechou um contrato com uma biblioteca e você está responsável por desenvolver o novo sistema para organizar os livros. O acervo que a biblioteca possui está descrito no array abaixo:
-*/
-
 const books = [
   {
     id: 1,
@@ -65,11 +61,14 @@ const books = [
   },
 ];
 
-// 🚀 1 - Filtre todos os objetos do gênero ficção científica ou fantasia.
+// 3 - Faça uma função que retorne os nomes dos livros, dado o ano de nascimento das pessoas autoras.
 
-const fantasyOrScienceFiction = (array) => {
-  return array.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+// const expectedResult = [ 'Fundação', 'Duna' ];
+
+const booksByAuthorBirthYear = (birthYear) => {
+  return books
+  .filter((book) => book.author.birthYear === birthYear)
+  .map((book) => book.name);
 }
 
-console.log(fantasyOrScienceFiction(books));
-
+console.log(booksByAuthorBirthYear(1920));
